@@ -10,16 +10,27 @@ int main(){
     }
 
     // posicionamento do navio 2 vertical
-    for(int j = 0; j < 3; j++){
-        tabuleiro[6 + j][8] = 3;
+    for(int i = 0; i < 3; i++){
+        tabuleiro[6 + i][8] = 3;
     }
 
+    // posicionamento do navio 3 diagonal
+    for(int i = 0; i < 3; i++){
+        tabuleiro[7 + i][0 + i] = 3;
+    }
+
+     // posicionamento do navio 4 diagonal
+    for(int i = 0; i < 3; i++){
+        tabuleiro[1 + i][8 - i] = 3;
+    }
+
+
         // imprimir tabuleiro
-        printf("***Tabuleiro*** \n");
+        printf("*** TABULEIRO *** \n");
         
     for(int i = 0; i < 10; i++){
     for(int j = 0; j < 10; j++){
-        printf(" %d ", tabuleiro[i][j]);
+        printf("%d ", tabuleiro[i][j]);
     }
     printf("\n");  
 }
